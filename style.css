@@ -343,9 +343,12 @@ a.channel:hover { border-color: rgba(25, 191, 200, .5); transform: translateX(4p
   .hero__content { margin-left: 2vw; }
   .hero__lead { max-width: 50ch; }
   .hero__frame { inset: 96px 36px 36px; }
-  .hero__scroll { display: block; position: absolute; left: 50%; bottom: 52px; width: 26px; height: 42px; border: 1.5px solid var(--line-2); border-radius: 14px; transform: translateX(-50%); }
-  .hero__scroll span { position: absolute; left: 50%; top: 8px; width: 3px; height: 8px; margin-left: -1.5px; border-radius: 2px; background: var(--accent); animation: wheel 1.8s ease-in-out infinite; }
-  @keyframes wheel { 60% { transform: translateY(12px); opacity: 0; } 61% { transform: none; opacity: 0; } }
+  .hero__scroll { display: flex; flex-direction: column; align-items: center; gap: 10px; position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%); color: var(--muted); transition: color .3s; }
+  .hero__scroll:hover { color: var(--accent-2); }
+  .hero__scroll small { font: 500 .62rem/1 var(--mono); letter-spacing: .3em; text-transform: uppercase; padding-left: .3em; }
+  .hero__scroll span { position: relative; width: 1px; height: 44px; background: var(--line-2); overflow: hidden; }
+  .hero__scroll span::after { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 14px; background: var(--accent); animation: drop 1.8s cubic-bezier(.6, 0, .4, 1) infinite; }
+  @keyframes drop { from { transform: translateY(-14px); } to { transform: translateY(44px); } }
   .services { grid-template-columns: repeat(12, 1fr); gap: 18px; }
   .card { grid-column: span 4; padding: 32px 28px 26px; min-height: 290px; }
   .card:nth-child(1), .card:nth-child(2), .card:nth-child(n+6) { grid-column: span 6; }
