@@ -190,7 +190,6 @@ p { margin: 0; }
 .has-gsap .card:not(.is-drawn) .draw :is(path, rect, circle, polyline) { stroke-dashoffset: 160; }
 .card.is-drawn .draw :is(path, rect, circle, polyline) { transition: stroke-dashoffset 1.4s var(--ease); }
 .ico-cam__led { animation: blink 1.6s steps(2, jump-none) infinite; color: #ff6b6b; }
-.ico-cam__body, .ico-bell__body, .ico-gate__leaf, .ico-radar__sweep { transform-box: fill-box; }
 .ico-cam__body { transform-origin: 0% 50%; }
 .card:hover .ico-cam__body { animation: pan 2.4s ease-in-out infinite; }
 @keyframes pan { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
@@ -198,20 +197,21 @@ p { margin: 0; }
 .card:hover .ico-bell__body { animation: ring .9s ease-in-out infinite; }
 @keyframes ring { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(12deg); } 40% { transform: rotate(-10deg); } 60% { transform: rotate(6deg); } 80% { transform: rotate(-3deg); } }
 .card:hover .ico-bell__wave { animation: blink .45s steps(2, jump-none) infinite; }
-.card:hover .ico-fence__bolt { animation: zap .7s steps(1) infinite; }
 @keyframes zap { 0%, 60% { opacity: 1; } 30%, 80% { opacity: .1; } }
-.card:hover .ico-fence__wire { stroke-dasharray: 3 5; animation: flow .6s linear infinite; }
 @keyframes flow { to { stroke-dashoffset: -16; } }
-.card:hover .ico-key__print { stroke-dasharray: 60; animation: scanp 1.4s ease-in-out infinite; }
 @keyframes scanp { 0% { stroke-dashoffset: 60; } 60%, 100% { stroke-dashoffset: 0; } }
-.ico-gate__leaf { transform-origin: 0% 50%; }
-.card:hover .ico-gate__leaf { animation: slide 2.2s ease-in-out infinite; }
 @keyframes slide { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(11px); } }
-.card:hover .ico-intercom__wave { stroke-dasharray: 12; animation: flow 1s linear infinite; }
 .ico-radar__sweep { transform-origin: 0% 100%; animation: spin 3.2s linear infinite; animation-play-state: paused; }
 .card:hover .ico-radar__sweep { animation-play-state: running; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .card:hover .ico-radar__blip { animation: blink .8s steps(2, jump-none) infinite; }
+
+.ico-gear__body, .ico-wrench__body, .ico-bolt__body { transform-box: fill-box; transform-origin: 50% 50%; }
+.card:hover .ico-gear__body { animation: spin 4s linear infinite; }
+.card:hover .ico-home__w1 { animation: blink .9s steps(2, jump-none) infinite; }
+.card:hover .ico-home__w2 { animation: blink .9s .45s steps(2, jump-none) infinite; }
+.card:hover .ico-bolt__body { animation: zap .7s steps(1) infinite; }
+.card:hover .ico-wrench__body { animation: ring 1.2s ease-in-out infinite; }
 
 /* Por que a Onix */
 .why { display: grid; gap: 48px; }

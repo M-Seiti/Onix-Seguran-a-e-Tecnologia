@@ -1,7 +1,7 @@
 // Dados editáveis do site
 const CONFIG = {
-  // TODO: número do WhatsApp com DDI+DDD, só dígitos (ex.: "5534999999999")
-  whatsapp: "",
+  // WhatsApp com DDI+DDD, só dígitos
+  whatsapp: "553438428126",
   instagram: "https://www.instagram.com/onix.seg/",
   msgBase: "Olá! Vim pelo site e gostaria de um orçamento de segurança.",
   msgServico: (s) => `Olá! Vim pelo site e gostaria de um orçamento de ${s}.`,
