@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Onix Segurança e Tecnologia | Segurança eletrônica em Monte Carmelo - MG</title>
+  <meta name="description" content="Segurança eletrônica em Monte Carmelo - MG: câmeras, alarmes, cerca elétrica, controle de acesso e automação para casas e empresas. Peça seu orçamento pelo WhatsApp.">
+  <meta name="theme-color" content="#08090b">
+  <!-- TODO: trocar pelo domínio definitivo (ex.: https://www.onixseguranca.com.br/) -->
+  <link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Onix Segurança e Tecnologia">
+  <meta property="og:title" content="Onix Segurança e Tecnologia — Segurança eletrônica em Monte Carmelo">
+  <meta property="og:description" content="Câmeras, alarmes, cerca elétrica e automação para sua casa ou empresa. Orçamento pelo WhatsApp.">
+  <!-- TODO: og:url e og:image precisam de URL absoluta do domínio final -->
+  <meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Onix Segurança e Tecnologia — Monte Carmelo, MG">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("has-gsap");
+    setTimeout(function () { if (!window.gsap) document.documentElement.classList.remove("has-gsap"); }, 3000);
+  </script>
+
+  <!-- TODO: preencher endereço, telefone e horário reais (JSON não aceita comentários, os campos com [] são placeholders) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Onix Segurança e Tecnologia",
+    "description": "Segurança eletrônica em Monte Carmelo - MG: câmeras, alarmes, cerca elétrica, controle de acesso e automação.",
+    "url": "https://SEU-DOMINIO.com.br/",
+    "image": "https://SEU-DOMINIO.com.br/assets/og-image.jpg",
+    "telephone": "+55-[DDD]-[NUMERO]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[RUA, NÚMERO, BAIRRO]",
+      "addressLocality": "Monte Carmelo",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Monte Carmelo - MG",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "[08:00]",
+        "closes": "[18:00]"
+      }
+    ],
+    "sameAs": ["https://www.instagram.com/onix.seg/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="nav" id="topo">
+    <div class="nav__inner">
+      <!-- Sem logo enviada: wordmark tipográfico. TODO: trocar por ./assets/logo.png quando houver -->
+      <a class="brand" href="#topo" aria-label="Onix Segurança e Tecnologia — início">
+        <svg class="brand__gem" viewBox="0 0 32 32" aria-hidden="true"><use href="#gem"/></svg>
+        <span class="brand__word">ONIX</span>
+        <span class="brand__sub">Segurança<br>e Tecnologia</span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#porque">Por que a Onix</a>
+        <a href="#como">Como funciona</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="btn btn--sm btn--ghost nav__cta" data-wa href="https://wa.me/55DDDNUMERO">Orçamento</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+    </div>
+    <div class="menu" id="menu" hidden>
+      <a href="#servicos">Serviços</a>
+      <a href="#porque">Por que a Onix</a>
+      <a href="#como">Como funciona</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#atendimento">Atendimento</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero__grid" aria-hidden="true"></canvas>
+      <div class="hero__beam" aria-hidden="true"></div>
+      <div class="hero__frame" aria-hidden="true">
+        <i class="c c--tl"></i><i class="c c--tr"></i><i class="c c--bl"></i><i class="c c--br"></i>
+        <div class="hud hud--top"><span class="rec"><b></b>REC</span><span>CAM 01 · <span class="clock" data-clock>--:--:--</span></span></div>
+        <div class="hud hud--bottom"><span>MONTE CARMELO · MG</span></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow" data-hero>Segurança eletrônica <span class="nw">· Monte Carmelo - MG</span></p>
+        <h1 id="hero-title" class="hero__title">
+          <span class="line" data-hero>Proteção</span>
+          <span class="line" data-hero>que não <em>pisca.</em></span>
+        </h1>
+        <p class="hero__lead" data-hero>Câmeras, alarmes, cerca elétrica e automação para a sua casa ou empresa. Projeto, instalação e suporte com quem está aqui do lado.</p>
+        <div class="hero__actions" data-hero>
+          <a class="btn btn--primary" data-wa href="https://wa.me/55DDDNUMERO">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#servicos" aria-label="Rolar para serviços"><span></span></a>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <!-- TODO: conferir a lista de serviços com o que a Onix realmente oferece (baseada nos exemplos do briefing) -->
+    <section class="section" id="servicos" aria-labelledby="servicos-title">
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          <span class="tag">01 — Serviços</span>
+          <h2 id="servicos-title">Cada ponto da sua casa ou empresa, <em>coberto.</em></h2>
+          <p>Escolha o que precisa e peça o orçamento direto pelo WhatsApp. A mensagem já vai pronta.</p>
+        </header>
+
+        <div class="services" data-stagger>
+          <article class="card" data-tilt data-service="câmeras de segurança (CFTV)">
+            <div class="card__icon ico-cam"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="ico-cam__body"><path d="M6 14h26l6 5v6l-6 5H6z"/><circle cx="31" cy="22" r="3.2"/></g><path d="M14 30v6M8 36h12"/><circle class="ico-cam__led" cx="11" cy="19" r="1.2" fill="currentColor" stroke="none"/></g></svg></div>
+            <h3>Câmeras / CFTV</h3>
+            <p>Imagem nítida de dia e de noite, com acesso pelo celular de onde você estiver.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar câmeras <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" data-tilt data-service="alarme">
+            <div class="card__icon ico-bell"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="ico-bell__body"><path d="M14 32V22a10 10 0 0 1 20 0v10l3 4H11z"/><path d="M20 39a4 4 0 0 0 8 0"/></g><path class="ico-bell__wave" d="M7 18a18 18 0 0 1 5-8M41 18a18 18 0 0 0-5-8"/></g></svg></div>
+            <h3>Alarmes</h3>
+            <p>Sensores em portas, janelas e ambientes, com aviso imediato quando algo sai do normal.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar alarme <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" data-tilt data-service="cerca elétrica">
+            <div class="card__icon ico-fence"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10v30M20 10v30M32 10v30M44 10v30"/><path class="ico-fence__wire" d="M4 16h44M4 24h44M4 32h44"/><path class="ico-fence__bolt" d="m26 2-4 7h5l-4 7" stroke-width="1.8"/></g></svg></div>
+            <h3>Cerca elétrica</h3>
+            <p>Barreira no perímetro que inibe a invasão antes mesmo dela começar.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar cerca elétrica <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" data-tilt data-service="controle de acesso">
+            <div class="card__icon ico-key"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="5" width="24" height="38" rx="4"/><path class="ico-key__print" d="M18 22a6 6 0 0 1 12 0v4M21 30v-8a3 3 0 0 1 6 0v6M24 22v10"/><path d="M20 38h8"/></g></svg></div>
+            <h3>Controle de acesso</h3>
+            <p>Biometria, senha ou cartão: só entra quem você autorizar, com registro de cada entrada.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar controle de acesso <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" data-tilt data-service="portão automático">
+            <div class="card__icon ico-gate"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40h40M6 40V12M42 40V12"/><g class="ico-gate__leaf"><path d="M10 38V16h18v22M10 22h18M10 30h18M16 16v22M22 16v22"/></g><path d="M34 26h4M36 24v4" stroke-width="1.6"/></g></svg></div>
+            <h3>Portão automático</h3>
+            <p>Motor e automação para abrir e fechar sem sair do carro, com mais segurança na chegada.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar portão automático <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" data-tilt data-service="interfone / vídeo porteiro">
+            <div class="card__icon ico-intercom"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="4" width="22" height="40" rx="3"/><circle cx="24" cy="14" r="4"/><path class="ico-intercom__wave" d="M18 26h12M18 30h12M18 34h12"/><circle cx="24" cy="39" r="1.3" fill="currentColor" stroke="none"/></g></svg></div>
+            <h3>Interfone</h3>
+            <p>Saiba quem está no portão antes de abrir, com áudio e, se quiser, vídeo.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar interfone <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card" data-tilt data-service="monitoramento">
+            <div class="card__icon ico-radar"><svg viewBox="0 0 48 48" aria-hidden="true"><g class="draw" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="10" opacity=".55"/><path class="ico-radar__sweep" d="M24 24 36.7 11.3"/><circle class="ico-radar__blip" cx="31" cy="30" r="1.6" fill="currentColor" stroke="none"/></g></svg></div>
+            <h3>Monitoramento</h3>
+            <p>Seu sistema acompanhado de perto, para agir rápido quando um alerta disparar.</p>
+            <a class="card__cta" data-wa-service href="#">Orçar monitoramento <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE A ONIX -->
+    <section class="section section--stone" id="porque" aria-labelledby="porque-title">
+      <div class="wrap why">
+        <div class="why__intro" data-reveal>
+          <span class="tag">02 — Por que a Onix</span>
+          <h2 id="porque-title">Densa, escura e <em>difícil de quebrar.</em></h2>
+          <p>O ônix é uma pedra formada em camadas, sólida e resistente. É essa a ideia por trás do nome: proteção construída camada por camada, sem ponto fraco.</p>
+          <svg class="why__gem" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <linearGradient id="gemA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a414b"/><stop offset="1" stop-color="#0b0d10"/></linearGradient>
+              <linearGradient id="gemB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2128"/><stop offset="1" stop-color="#050607"/></linearGradient>
+            </defs>
+            <polygon points="100,8 172,58 100,192 28,58" fill="url(#gemB)"/>
+            <polygon points="100,8 172,58 100,74" fill="url(#gemA)"/>
+            <polygon points="100,8 28,58 100,74" fill="#262c34"/>
+            <polygon points="28,58 100,74 100,192" fill="#0e1115"/>
+            <polygon points="172,58 100,74 100,192" fill="#151a20"/>
+            <polyline class="why__gem-edge" points="100,8 172,58 100,192 28,58 100,8" fill="none"/>
+            <line class="why__gem-edge" x1="28" y1="58" x2="172" y2="58"/>
+          </svg>
+        </div>
+
+        <!-- TODO: substituir pelos diferenciais reais da Onix (anos de experiência, garantia, visita gratuita etc.) -->
+        <ul class="why__list" data-stagger>
+          <li class="feat todo-block">
+            <span class="feat__n">01</span>
+            <div><h3>[Diferencial 1]</h3><p>Ex.: anos de experiência no mercado. <mark class="todo">TODO</mark></p></div>
+          </li>
+          <li class="feat todo-block">
+            <span class="feat__n">02</span>
+            <div><h3>[Diferencial 2]</h3><p>Ex.: tempo médio de atendimento. <mark class="todo">TODO</mark></p></div>
+          </li>
+          <li class="feat todo-block">
+            <span class="feat__n">03</span>
+            <div><h3>[Diferencial 3]</h3><p>Ex.: garantia dos equipamentos e da instalação. <mark class="todo">TODO</mark></p></div>
+          </li>
+          <li class="feat todo-block">
+            <span class="feat__n">04</span>
+            <div><h3>[Diferencial 4]</h3><p>Ex.: visita técnica gratuita. <mark class="todo">TODO</mark></p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section" id="como" aria-labelledby="como-title">
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          <span class="tag">03 — Como funciona</span>
+          <h2 id="como-title">Do primeiro “oi” ao sistema <em>funcionando.</em></h2>
+        </header>
+        <div class="steps-wrap">
+        <span class="steps__track" aria-hidden="true"><span class="steps__fill"></span></span>
+        <ol class="steps">
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__n">Passo 1</span>
+            <h3>Contato</h3>
+            <p>Você chama no WhatsApp ou preenche o formulário contando o que precisa proteger.</p>
+          </li>
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__n">Passo 2</span>
+            <h3>Visita técnica</h3>
+            <p>Avaliamos o local, os pontos vulneráveis e indicamos a solução certa para o seu caso.</p>
+          </li>
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__n">Passo 3</span>
+            <h3>Instalação</h3>
+            <p>Instalação organizada, testes de cada equipamento e orientação de uso no final.</p>
+          </li>
+          <li class="step" data-step>
+            <span class="step__dot" aria-hidden="true"></span>
+            <span class="step__n">Passo 4</span>
+            <h3>Suporte</h3>
+            <p>Depois de instalado, seguimos por perto para ajustes, dúvidas e manutenção.</p>
+          </li>
+        </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <!-- TODO: adicionar fotos reais em ./assets/fotos/ (WebP). Modelo de cada item:
+      <figure class="shot"><picture><source srcset="assets/fotos/foto1.webp" type="image/webp"><img src="assets/fotos/foto1.jpg" alt="Descrição da instalação" loading="lazy" decoding="async" width="800" height="1000"></picture><figcaption>Legenda</figcaption></figure>
+    -->
+    <section class="section section--tight" id="galeria" aria-labelledby="galeria-title">
+      <div class="wrap">
+        <header class="section__head section__head--row" data-reveal>
+          <div>
+            <span class="tag">04 — Galeria</span>
+            <h2 id="galeria-title">Instalações <em>reais.</em></h2>
+          </div>
+          <a class="link-arrow" href="https://www.instagram.com/onix.seg/" target="_blank" rel="noopener">Mais no Instagram <span aria-hidden="true">↗</span></a>
+        </header>
+        <div class="gallery" data-stagger>
+          <figure class="shot shot--ph"><span class="shot__hud">CAM 01</span><figcaption>Foto da instalação <mark class="todo">TODO</mark></figcaption></figure>
+          <figure class="shot shot--ph"><span class="shot__hud">CAM 02</span><figcaption>Foto da instalação <mark class="todo">TODO</mark></figcaption></figure>
+          <figure class="shot shot--ph"><span class="shot__hud">CAM 03</span><figcaption>Foto da instalação <mark class="todo">TODO</mark></figcaption></figure>
+          <figure class="shot shot--ph"><span class="shot__hud">CAM 04</span><figcaption>Foto da instalação <mark class="todo">TODO</mark></figcaption></figure>
+          <figure class="shot shot--ph"><span class="shot__hud">CAM 05</span><figcaption>Foto da instalação <mark class="todo">TODO</mark></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREA DE ATENDIMENTO -->
+    <section class="section section--stone" id="atendimento" aria-labelledby="atendimento-title">
+      <div class="wrap area">
+        <div class="area__text" data-reveal>
+          <span class="tag">05 — Área de atendimento</span>
+          <h2 id="atendimento-title">Daqui de <em>Monte Carmelo.</em></h2>
+          <p>Base em Monte Carmelo - MG, atendendo a cidade e <span class="ph">[cidades da região]</span><mark class="todo">TODO</mark>.</p>
+          <ul class="chips">
+            <li>Monte Carmelo</li>
+            <!-- TODO: listar as outras cidades atendidas -->
+            <li class="ph">[Cidade]</li>
+            <li class="ph">[Cidade]</li>
+          </ul>
+          <address class="area__addr">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span><span class="ph">[RUA, NÚMERO, BAIRRO]</span><mark class="todo">TODO</mark><br>Monte Carmelo - MG</span>
+          </address>
+        </div>
+        <div class="map" data-reveal>
+          <!-- TODO: trocar q= pelo endereço completo da Onix -->
+          <span class="map__ph" aria-hidden="true">Carregando mapa…</span>
+          <iframe title="Mapa: Monte Carmelo - MG" src="https://www.google.com/maps?q=Monte+Carmelo+-+MG&amp;z=13&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <span class="map__corner" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <div class="wrap contact">
+        <div class="contact__info" data-reveal>
+          <span class="tag">06 — Contato</span>
+          <h2 id="contato-title">Vamos proteger o que é <em>seu.</em></h2>
+          <p>Mande uma mensagem e retornamos com o orçamento. Se preferir, fale direto pelo WhatsApp.</p>
+
+          <ul class="channels">
+            <li>
+              <a class="channel" data-wa href="https://wa.me/55DDDNUMERO">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span><small>WhatsApp</small><b data-wa-label>[(DDD) NÚMERO]</b></span>
+              </a>
+            </li>
+            <li>
+              <a class="channel" href="https://www.instagram.com/onix.seg/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg>
+                <span><small>Instagram</small><b>@onix.seg</b></span>
+              </a>
+            </li>
+            <!-- TODO: telefone fixo e e-mail, se houver (remover os itens se não existirem) -->
+            <li>
+              <span class="channel channel--static">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg>
+                <span><small>Telefone</small><b class="ph">[(34) FIXO]</b></span>
+              </span>
+            </li>
+            <li>
+              <span class="channel channel--static">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+                <span><small>E-mail</small><b class="ph">[email@dominio.com.br]</b></span>
+              </span>
+            </li>
+            <li>
+              <span class="channel channel--static">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clock"/></svg>
+                <!-- TODO: horário real -->
+                <span><small>Horário</small><b class="ph">[Seg a sex, 8h às 18h · Sáb, 8h às 12h]</b></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TODO: trocar SEU_ID_AQUI pelo ID do formulário no Formspree -->
+        <form class="form" id="form" action="https://formspree.io/f/SEU_ID_AQUI" method="POST" novalidate data-reveal>
+          <div class="form__scan" aria-hidden="true"></div>
+          <div class="field">
+            <label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required minlength="2" placeholder="Seu nome">
+            <small class="field__err" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="f-tel">Telefone / WhatsApp</label>
+            <input id="f-tel" name="telefone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="(34) 9 0000-0000">
+            <small class="field__err" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="f-cidade">Cidade</label>
+            <input id="f-cidade" name="cidade" type="text" autocomplete="address-level2" required value="Monte Carmelo">
+            <small class="field__err" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="f-servico">Serviço de interesse</label>
+            <div class="select">
+              <select id="f-servico" name="servico" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Câmeras / CFTV</option>
+                <option>Alarmes</option>
+                <option>Cerca elétrica</option>
+                <option>Controle de acesso</option>
+                <option>Portão automático</option>
+                <option>Interfone</option>
+                <option>Monitoramento</option>
+                <option>Mais de um / não sei ainda</option>
+              </select>
+            </div>
+            <small class="field__err" aria-live="polite"></small>
+          </div>
+          <div class="field field--full">
+            <label for="f-msg">Mensagem</label>
+            <textarea id="f-msg" name="mensagem" rows="4" required minlength="5" placeholder="Conte o que você quer proteger: casa, comércio, quantos ambientes…"></textarea>
+            <small class="field__err" aria-live="polite"></small>
+          </div>
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--primary form__submit" type="submit">
+            <span class="form__label">Enviar mensagem</span>
+            <span class="form__spinner" aria-hidden="true"></span>
+          </button>
+          <div class="form__status" role="status" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#topo" aria-label="Voltar ao topo">
+          <svg class="brand__gem" viewBox="0 0 32 32" aria-hidden="true"><use href="#gem"/></svg>
+          <span class="brand__word">ONIX</span>
+          <span class="brand__sub">Segurança<br>e Tecnologia</span>
+        </a>
+        <p><span class="ph">[RUA, NÚMERO, BAIRRO]</span><mark class="todo">TODO</mark><br>Monte Carmelo - MG</p>
+      </div>
+      <nav class="footer__links" aria-label="Rodapé">
+        <a href="#servicos">Serviços</a>
+        <a href="#como">Como funciona</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#contato">Contato</a>
+        <a href="https://www.instagram.com/onix.seg/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p class="footer__copy">© <span data-year>2026</span> Onix Segurança e Tecnologia. Todos os direitos reservados.</p>
+    </div>
+    <div class="footer__word" aria-hidden="true">ONIX</div>
+  </footer>
+
+  <a class="wa-float" data-wa href="https://wa.me/55DDDNUMERO" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+    <span class="wa-float__ring" aria-hidden="true"></span>
+  </a>
+
+  <!-- Sprite de ícones -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="gem" viewBox="0 0 32 32">
+      <polygon points="16,1 29,10 16,31 3,10" fill="#0d1014" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <polyline points="3,10 16,13 29,10" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="16" y1="13" x2="16" y2="31" stroke="currentColor" stroke-width="1" opacity=".55"/>
+      <polygon points="16,1 29,10 16,13" fill="currentColor" opacity=".35"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 3h3.2l1.6 4.4-2.1 1.3a11 11 0 0 0 5.6 5.6l1.3-2.1L19 13.8V17a2 2 0 0 1-2 2A14 14 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  </svg>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
