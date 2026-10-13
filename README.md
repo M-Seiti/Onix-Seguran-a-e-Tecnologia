@@ -9,14 +9,8 @@ python3 -m http.server 8080   # abra http://localhost:8080
 ## Onde editar os dados
 
 - **WhatsApp**: em `script.js`, no topo, `CONFIG.whatsapp` (DDI+DDD+número, só dígitos; hoje `553438428126`). Todos os botões, o flutuante e os "Orçar ..." de cada serviço usam esse número.
-- **Demais dados** (endereço, horário, cidades, diferenciais, telefone, e-mail): procure por `TODO` no `index.html`. Os trechos visíveis no site aparecem com uma etiqueta amarela "TODO".
-- **Fotos**: coloque em `assets/fotos/` (de preferência `.webp`) e troque os blocos `.shot--ph` da galeria pelo modelo que está no comentário acima da seção.
-
-## Trocar o ID do Formspree
-
-1. Crie uma conta em <https://formspree.io>, clique em **New Form** e copie o ID (ex.: `xayzbcde`).
-2. No `index.html`, troque `SEU_ID_AQUI` em `action="https://formspree.io/f/SEU_ID_AQUI"` pelo ID.
-3. Faça um envio de teste e confirme o e-mail de ativação que o Formspree mandar.
+- **Formulário**: não usa serviço externo. Ao enviar, ele valida os campos e abre o WhatsApp da Onix com nome, telefone, cidade, serviço e mensagem já escritos. O cliente só toca em enviar.
+- **Logo**: `assets/logo.png` e `assets/logo.webp`. Uma versão em alta resolução (PNG com fundo transparente) deixaria a logo mais nítida em telas grandes.
 
 ## Deploy
 
@@ -24,7 +18,7 @@ python3 -m http.server 8080   # abra http://localhost:8080
 
 **Vercel**: em <https://vercel.com/new>, importe o repositório do GitHub (Framework Preset: **Other**, sem build command), ou rode `npx vercel` dentro da pasta.
 
-Depois do deploy, troque `https://SEU-DOMINIO.com.br/` no `index.html` (canonical, `og:url`, `og:image` e JSON-LD) pela URL final. É isso que faz a prévia do link aparecer no WhatsApp.
+Depois do deploy, o site ganha um endereço (ex.: `onix-seguranca.vercel.app` ou, com domínio próprio, `www.onixseguranca.com.br`). Troque todas as ocorrências de `https://SEU-DOMINIO.com.br/` no `index.html` por esse endereço. O WhatsApp e o Google só aceitam a imagem de prévia (`og-image.jpg`) com o endereço completo; sem isso o link compartilhado aparece sem imagem.
 
 ## Apontar um domínio .com.br
 

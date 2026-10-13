@@ -33,7 +33,7 @@ function setupWhatsApp() {
   const n = CONFIG.whatsapp.replace(/^55/, "");
   if (n.length >= 10) {
     const label = `(${n.slice(0, 2)}) ${n.slice(2, -4)}-${n.slice(-4)}`;
-    $$("[data-wa-label]").forEach((el) => { el.textContent = label; el.classList.remove("ph"); });
+    $$("[data-wa-label]").forEach((el) => { el.textContent = label; });
   }
 }
 
@@ -96,7 +96,7 @@ function setupHeroGrid() {
       const hit = dx > 0 && dx < 180 ? 1 - dx / 180 : 0;
       d.glow = Math.max(hit, d.glow * 0.985);
       const a = 0.12 + d.glow * 0.85;
-      ctx.fillStyle = d.glow > 0.05 ? `rgba(120,225,255,${a})` : "rgba(170,195,215,.12)";
+      ctx.fillStyle = d.glow > 0.05 ? `rgba(110,232,236,${a})` : "rgba(170,195,215,.12)";
       if (d.cross) {
         ctx.fillRect(d.x - 4, d.y - 0.5, 8, 1);
         ctx.fillRect(d.x - 0.5, d.y - 4, 1, 8);
@@ -205,11 +205,10 @@ function setupAnimations() {
   });
 }
 
-// Validação no front e envio ao Formspree via fetch
+// Validação no front e envio da mensagem montada para o WhatsApp
 function setupForm() {
   const form = $("#form");
   const status = $(".form__status", form);
-  const label = $(".form__label", form);
   form.style.setProperty("--fh", form.offsetHeight + "px");
 
   const rules = {
@@ -242,49 +241,36 @@ function setupForm() {
     tel.value = out;
   });
 
-  $$("input:not(.hp), select, textarea", form).forEach((el) => {
+  const fields = $$("input, select, textarea", form);
+  fields.forEach((el) => {
     el.addEventListener("blur", () => el.value && check(el));
     el.addEventListener("input", () => el.closest(".field").classList.contains("is-invalid") && check(el));
   });
 
-  const icons = {
-    ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".4"/><path class="check" d="m7.5 12.5 3 3 6-6.5"/></svg>',
-    err: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10" opacity=".4"/><path d="M12 7.5v5.5M12 16.5v.01"/></svg>',
-  };
-  function show(type, msg) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!fields.map(check).every(Boolean)) { fields.find((f) => f.getAttribute("aria-invalid") === "true")?.focus(); return; }
+
+    const v = Object.fromEntries(new FormData(form));
+    const text = [
+      "Olá! Vim pelo site e gostaria de um orçamento.",
+      "",
+      `*Nome:* ${v.nome.trim()}`,
+      `*Telefone:* ${v.telefone.trim()}`,
+      `*Cidade:* ${v.cidade.trim()}`,
+      `*Serviço:* ${v.servico}`,
+      `*Mensagem:* ${v.mensagem.trim()}`,
+    ].join("\n");
+    const url = waLink(text);
+    const win = window.open(url, "_blank");
+    if (win) win.opener = null;
+    else location.href = url;
+
     status.hidden = false;
-    status.className = `form__status is-${type}`;
-    status.innerHTML = `${icons[type]}<span>${msg}</span>`;
+    status.className = "form__status is-ok";
+    status.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".4"/><path class="check" d="m7.5 12.5 3 3 6-6.5"/></svg><span>Abrimos o WhatsApp com a sua mensagem pronta. É só tocar em enviar.</span>';
     void status.offsetWidth;
     status.classList.add("pop");
-  }
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const fields = $$("input:not(.hp), select, textarea", form);
-    const valid = fields.map(check).every(Boolean);
-    if (!valid) { fields.find((f) => f.getAttribute("aria-invalid") === "true")?.focus(); return; }
-
-    const wa = `<a href="${waLink(CONFIG.msgBase)}" target="_blank" rel="noopener"><u>WhatsApp</u></a>`;
-    if (form.action.includes("SEU_ID_AQUI")) {
-      show("err", `Formulário ainda em configuração. Por enquanto, fale com a gente pelo ${wa}.`);
-      return;
-    }
-
-    form.classList.add("is-sending");
-    label.textContent = "Enviando…";
-    try {
-      const res = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
-      if (!res.ok) throw new Error(res.status);
-      form.reset();
-      $("#f-cidade").value = "Monte Carmelo";
-      show("ok", "Mensagem enviada! Em breve entraremos em contato.");
-    } catch {
-      show("err", `Não foi possível enviar agora. Tente de novo ou chame no ${wa}.`);
-    } finally {
-      form.classList.remove("is-sending");
-      label.textContent = "Enviar mensagem";
-    }
   });
 }
 
