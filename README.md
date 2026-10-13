@@ -18,7 +18,7 @@ python3 -m http.server 8080   # abra http://localhost:8080
 
 **Vercel**: em <https://vercel.com/new>, importe o repositório do GitHub (Framework Preset: **Other**, sem build command), ou rode `npx vercel` dentro da pasta.
 
-Depois do deploy, o site ganha um endereço (ex.: `onix-seguranca.vercel.app` ou, com domínio próprio, `www.onixseguranca.com.br`). Troque todas as ocorrências de `https://SEU-DOMINIO.com.br/` no `index.html` por esse endereço. O WhatsApp e o Google só aceitam a imagem de prévia (`og-image.jpg`) com o endereço completo; sem isso o link compartilhado aparece sem imagem.
+O site está publicado em <https://onixseguranca.netlify.app/>. Se passar a usar um domínio próprio, troque todas as ocorrências de `https://onixseguranca.netlify.app/` no `index.html` (canonical, `og:url`, `og:image` e JSON-LD) pelo novo endereço. O WhatsApp e o Google só leem a imagem de prévia pelo endereço completo.
 
 ## Apontar um domínio .com.br
 
